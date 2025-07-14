@@ -1,0 +1,308 @@
+#root {
+  /* max-width: 1280px; */ /* Removed max-width to allow full width */
+  margin: 0 auto;
+  padding: 0; /* Remove padding from root */
+  text-align: center; /* Keep text alignment if needed */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  /* Existing card styles, adjust colors/spacing if necessary */
+  background-color: rgb(21,20,55); /* Use the div-color for cards */
+  border-radius: 1rem; /* Match auth card border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
+  padding: 2rem; /* Consistent padding */
+  color: rgba(35,186,255,255); /* Apply font color to card text */
+  /* Ensure no white background here */
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.App {
+  min-height: 100vh; /* Ensure App takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  /* Centering handled by Layout component's .main */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* Background handled by Layout component's .main */
+  /* background-color: #3a3a3a; */
+  /* padding-top: <header-height>; */ /* Padding handled by Layout component's .main */
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+:root {
+  --primary-color: rgba(35,186,255,255); /* Use bright blue for primary */
+  --primary-dark: rgba(35,186,255,0.8); /* Use muted blue for primary dark */
+  --secondary-color: rgba(35,186,255,0.6); /* Use a more muted blue for secondary */
+  --background-color: rgba(14,14,14,255); /* Dark background */
+  --text-color: rgba(35,186,255,255); /* Bright blue for text */
+  --text-light: rgba(35,186,255,0.8); /* Muted blue for light text */
+  --white: rgba(35,186,255,255); /* Redefine white to bright blue */
+  --error: #ff4444;
+  --success: #48bb78;
+  --warning: #ed8936;
+  --border-color: rgba(35,186,255,0.3); /* Muted blue for borders */
+}
+
+a {
+  color: var(--primary-color); /* Use primary color variable */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-dark); /* Use primary dark color variable */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--secondary-color); /* Use secondary color variable */
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color); /* Use border color variable */
+  border-radius: 4px;
+  width: 100%;
+  transition: all 0.2s ease;
+  background-color: var(--background-color-inputs); /* Use input background variable */
+  color: var(--font-color); /* Use font color variable */
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color); /* Use primary color variable */
+  box-shadow: 0 0 0 3px rgba(35,186,255,0.15); /* Use primary color with opacity */
+}
+
+.error {
+  color: #ff4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.success {
+  color: #48bb78;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.warning {
+  color: #ed8936;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Loading Spinner - Keep if used */
+.loading-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  gap: 1rem;
+  color: rgba(35,186,255,0.8); /* Muted blue */
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(35,186,255,0.3); /* Muted blue border */
+  border-top-color: rgba(35,186,255,255); /* Bright blue spinner part */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color); /* Use primary color */
+  color: rgba(14,14,14,255); /* Dark text for primary button */
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark); /* Use primary dark color */
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color); /* Use secondary color */
+  color: rgba(14,14,14,255); /* Dark text for secondary button */
+}
+
+.btn-secondary:hover {
+  background-color: rgba(35,186,255,0.4); /* Muted blue on hover */
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--border-color); /* Use border color */
+  color: var(--text-color); /* Use text color */
+}
+
+.btn-outline:hover {
+  background-color: rgba(35,186,255,0.1); /* Muted blue background on hover */
+  border-color: var(--text-color); /* Use text color for border on hover */
+}
+
+.btn-danger {
+  background-color: var(--error); /* Use error color */
+  color: rgba(14,14,14,255); /* Dark text for danger button */
+}
+
+.btn-danger:hover {
+  background-color: #c53030; /* Darker error on hover */
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color); /* Use text color variable */
+  font-weight: 500;
+}
+
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+  border-color: var(--error);
+}
+
+.form-group input.error:focus,
+.form-group textarea.error:focus,
+.form-group select.error:focus {
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.15);
+}
+
+/* Card Styles */
+.card-header {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(35,186,255,0.3); /* Use a muted blue border */
+  /* Ensure no white background here */
+}
+
+.card-body {
+  padding: 1rem;
+  /* Ensure no white background here */
+}
+
+.card-footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(35,186,255,0.3); /* Use a muted blue border */
+  /* Ensure no white background here */
+}
+
+/* Alert Styles */
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background-color: rgb(21,20,55); /* Dark background for alerts */
+  color: var(--text-color); /* Use text color for alerts */
+}
+
+.alert-error {
+  background-color: rgba(255, 68, 68, 0.2); /* Muted error background */
+  color: var(--error); /* Use error color for text */
+  border: 1px solid var(--error); /* Use error color for border */
+}
+
+.alert-success {
+  background-color: rgba(72, 187, 120, 0.2); /* Muted success background */
+  color: var(--success); /* Use success color for text */
+  border: 1px solid var(--success); /* Use success color for border */
+}
+
+.alert-warning {
+  background-color: rgba(237, 137, 54, 0.2); /* Muted warning background */
+  color: var(--warning); /* Use warning color for text */
+  border: 1px solid var(--warning); /* Use warning color for border */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 0.75rem;
+  }
+}

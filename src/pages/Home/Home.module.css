@@ -1,0 +1,715 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('/images/hero-bg.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(35,186,255,255);
+  padding: 2rem;
+  margin: -2rem -2rem 2rem -2rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Styles */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(35,186,255,0.3);
+}
+
+.sectionHeader h2 {
+  font-size: 2rem;
+  color: rgba(35,186,255,255);
+  margin: 0;
+}
+
+/* Game Grid */
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.gameCard {
+  background: rgb(21,20,55);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(35,186,255,255);
+}
+
+.gameCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.gameImage {
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.gameImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.platform {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(14,14,14,0.8);
+  color: rgba(35,186,255,255);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+.discountBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #e53e3e;
+  color: rgba(14,14,14,255);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.gameInfo {
+  padding: 1rem;
+}
+
+.gameInfo h3 {
+  font-size: 1.25rem;
+  color: rgba(35,186,255,255);
+  margin: 0 0 0.5rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: rgba(35,186,255,255);
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: rgba(35,186,255,0.6);
+}
+
+.discountPrice {
+  color: #48bb78;
+}
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: rgba(14,14,14,255);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem;
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.75rem;
+  color: rgba(35,186,255,255);
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: rgba(35,186,255,0.8);
+  line-height: 1.6;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background: linear-gradient(135deg, rgb(52,5,130) 0%, rgb(30, 10, 60) 100%);
+  padding: 4rem 2rem;
+  color: rgba(35,186,255,255);
+}
+
+.newsletterContent {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletterContent h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.newsletterContent p {
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 1rem;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: rgba(35,186,255,0.1);
+  color: rgba(35,186,255,255);
+}
+
+.newsletterButton {
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(35,186,255,255);
+  color: rgba(14,14,14,255);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletterButton:hover {
+  background-color: rgba(35,186,255,0.8);
+}
+
+/* Buttons */
+.primaryButton,
+.secondaryButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  background-color: rgba(35,186,255,255);
+  color: rgba(14,14,14,255);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.primaryButton {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+}
+
+.primaryButton:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: rgba(35,186,255,255);
+  border: 1px solid rgba(35,186,255,255);
+}
+
+.secondaryButton:hover {
+  background-color: rgba(35,186,255,0.1);
+  border-color: rgba(35,186,255,0.8);
+  color: rgba(35,186,255,255);
+}
+
+/* News Section */
+.newsSection {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: rgba(35,186,255,255);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: rgb(21,20,55);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carouselContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.newsCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.newsCard.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.newsImage {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.newsImage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(21,20,55,0.9), rgba(21,20,55,0.4));
+}
+
+.newsInfo {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(21,20,55);
+  color: rgba(35,186,255,255);
+}
+
+.newsDate {
+  font-size: 0.9rem;
+  color: rgba(35,186,255,0.7);
+  margin-bottom: 1rem;
+}
+
+.newsTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgba(35,186,255,255);
+}
+
+.newsDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(35,186,255,0.9);
+  margin-bottom: 2rem;
+}
+
+.readMore {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(35,186,255,255);
+  color: rgb(21,20,55);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.readMore:hover {
+  background: rgba(35,186,255,0.8);
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(35,186,255,0.2);
+  border: none;
+  border-radius: 50%;
+  color: rgba(35,186,255,255);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.carouselButton:hover {
+  background: rgba(35,186,255,0.4);
+}
+
+.prevButton {
+  left: 1rem;
+}
+
+.nextButton {
+  right: 1rem;
+}
+
+.carouselIndicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(35,186,255,0.3);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.indicator.active {
+  background: rgba(35,186,255,255);
+}
+
+/* Games Section */
+.gamesSection {
+  margin-bottom: 4rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: rgba(35,186,255,255);
+  margin: 0;
+}
+
+.viewAll {
+  padding: 0.75rem 1.5rem;
+  background: rgba(35,186,255,0.1);
+  color: rgba(35,186,255,255);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.viewAll:hover {
+  background: rgba(35,186,255,0.2);
+}
+
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.gameCard {
+  background: rgb(21,20,55);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: rgba(35,186,255,255);
+}
+
+.gameCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gameImage {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.gameImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gameCard:hover .gameImage img {
+  transform: scale(1.05);
+}
+
+.gameInfo {
+  padding: 1.5rem;
+}
+
+.gameTitle {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  color: rgba(35,186,255,255);
+}
+
+.gameMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.gamePlatform {
+  color: rgba(35,186,255,0.7);
+}
+
+.gamePrice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: rgba(35,186,255,0.5);
+}
+
+.discountPrice {
+  color: #48bb78;
+}
+
+.discountBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #e53e3e;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.platform {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(21,20,55,0.8);
+  color: rgba(35,186,255,255);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heroContent h1 {
+    font-size: 3rem;
+  }
+
+  .heroContent p {
+    font-size: 1.25rem;
+  }
+
+  .newsCard {
+    flex-direction: column;
+  }
+
+  .newsImage {
+    height: 40%;
+  }
+
+  .newsInfo {
+    height: 60%;
+    padding: 1.5rem;
+  }
+
+  .newsTitle {
+    font-size: 1.75rem;
+  }
+
+  .newsDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1.25rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.5rem;
+  }
+
+  .gameGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+  }
+
+  .newsletterButton {
+    width: 100%;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .carousel {
+    height: 600px;
+  }
+
+  .sectionTitle,
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+
+  .gamesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 50vh;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.25rem;
+  }
+
+  .gameGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .carousel {
+    height: 700px;
+  }
+
+  .newsTitle {
+    font-size: 1.5rem;
+  }
+
+  .newsDescription {
+    font-size: 0.9rem;
+  }
+
+  .carouselButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .gamesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .gameImage {
+    height: 150px;
+  }
+
+  .gameTitle {
+    font-size: 1rem;
+  }
+} 

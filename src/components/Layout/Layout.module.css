@@ -1,0 +1,144 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Background handled by body in index.css */
+  /* background-color: #f8f9fa; */
+}
+
+.main {
+  position: relative; /* Necesario para posicionar hijos absolutamente */
+  flex: 1;
+  width: 100%;
+  min-height: calc(100vh - var(--navbar-height, 64px) - var(--footer-height, 60px));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Opcional: oculta desbordes */
+  background-image: url('/images/games/covers/ESCUDADRONSUCIDALOGO.jpg'); /* Usa tu foto aquí */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Keep a reasonable max-width for content */
+  margin: 0 auto;
+  padding: 2rem; /* Add padding within the container */
+  height: 100%;
+  display: flex; /* Use flexbox to center content inside container if needed */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.pageContainer {
+  background: rgb(21,20,55); /* Dark background for the card area */
+  border-radius: 1rem; /* Consistent border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Consistent shadow */
+  padding: 2rem; /* Consistent padding */
+  /* height and min-height removed to allow content to determine size */
+}
+
+.pageHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(35,186,255,0.3); /* Muted blue border */
+}
+
+.pageHeader h1 {
+  font-size: 2rem;
+  color: rgba(35,186,255,255); /* Bright blue */
+  margin: 0;
+}
+
+.pageContent {
+  height: calc(100% - 4rem); /* subtract header height */
+}
+
+.footer {
+  background-color: #343a40; /* Keep dark background for footer */
+  color: rgba(35,186,255,0.8); /* Muted blue for footer text */
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Add CSS variables for heights if navbar/footer heights are consistent */
+:root {
+  --navbar-height: 64px; /* Example height, adjust as needed */
+  --footer-height: 60px; /* Example height, adjust as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+    padding: 0 1rem;
+  }
+  
+  .main {
+    padding: 1rem 0;
+  }
+
+  .pageContainer {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .pageHeader h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .pageContainer {
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  .pageHeader h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.cornerImage {
+  position: absolute;
+  width: 200px;   /* Ajusta el tamaño a tu gusto */
+  height: 140px;
+  object-fit: contain;
+  border-radius: 0px; /* Opcional: bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.topLeft     { top: 100px; left: 16px; }
+.topRight    { top: 16px; right: 16px; }
+.bottomLeft  { bottom: 16px; left: 16px; }
+.bottomRight { bottom: 16px; right: 16px; }

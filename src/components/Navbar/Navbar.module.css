@@ -1,0 +1,145 @@
+.navbar {
+  background-color: rgb(21, 20, 55);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: darkorchid;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.brand:hover {
+  color: #4299e1;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navLink {
+  color: rgba(35, 186, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+  color: #4299e1;
+  background-color: #f7fafc;
+}
+
+.navLink.active {
+  color: #4299e1;
+  background-color: #ebf8ff;
+}
+
+.authLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.register {
+  background-color: #4299e1;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.register:hover {
+  background-color: #3182ce;
+  color: white;
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #e53e3e;
+}
+
+.logoutButton:hover {
+  color: #c53030;
+  background-color: #fff5f5;
+}
+.logo {
+  width: 3rem;
+  object-fit: contain;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+
+  .navLinks {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .authLinks {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .navLink {
+    font-size: 0.875rem;
+  }
+
+  .register {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 1.25rem;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .authLinks {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navLink {
+    text-align: center;
+  }
+
+  .logoutButton {
+    width: 100%;
+    text-align: center;
+  }
+}

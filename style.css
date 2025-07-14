@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+:root{
+    /*Colores*/
+    --background-color:rgba(14,14,14,255);
+    --font-color: rgba(35,186,255,255);
+    --div-color: rgb(21,20,55);
+    --background-color-inputs: rgb(52,5,130);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Oxanium", sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-size: 0.7rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    background-color: var(--div-color);
+}
+header .logo {
+    width: 4rem;
+}
+header a {
+    text-decoration: none;
+}   
+main{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.container{
+    width: 20rem;
+    background-color: var(--div-color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.container form label{
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+.container form > label:nth-of-type(2){
+    margin-right: 5rem;
+}
+.container form{
+    margin: 1rem 0;
+}
+.container a{
+    text-decoration: none;
+}
+.container form input{
+    width: 100%;
+    border-radius: 0.4rem;
+    border-style: none;
+    padding: 0.1rem;
+    outline: none;
+    margin-bottom: 0.5rem;
+    background-color: var(--background-color-inputs);
+    color: var(--font-color);
+    font-family: "Oxanium", sans-serif;
+}
+#sign-in{
+    font-size: 0.6rem;
+    display: block;
+    justify-self: center;
+    font-family: "Oxanium", sans-serif;
+    padding: 0.2rem;
+    margin: 0.5rem 0;
+    border-radius: 0.4rem;
+    border: none;
+    background-color: rgb(52,5,130);
+    color: var(--font-color);
+}
+#sign-in:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.sub-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+

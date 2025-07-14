@@ -1,0 +1,7 @@
+/* This file can be used for global authentication-related styles if needed, 
+   but layout and element styles are handled in Layout.module.css and component modules. */
+
+/* Example: You could define authentication-specific variables here if they are not used globally */
+/* :root {
+    --auth-specific-color: #123456;
+} */ 

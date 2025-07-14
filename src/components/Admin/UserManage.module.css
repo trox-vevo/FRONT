@@ -1,0 +1,153 @@
+.container {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin-bottom: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.formContainer {
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background: #f7f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.formGroup {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 0.5rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.formActions {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.submitButton {
+  background: #388e3c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submitButton:hover {
+  background: #2e7d32;
+}
+
+.gamesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gameCard {
+  display: flex;
+  background: #f7f9fa;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 1rem;
+  align-items: center;
+}
+
+.gameContent {
+  flex: 1;
+}
+
+.gameHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  padding: 0.2rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.published {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.draft {
+  background: #fffde7;
+  color: #fbc02d;
+}
+
+.meta {
+  font-size: 0.95rem;
+  color: #607d8b;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton {
+  background: #0288d1;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.editButton:hover {
+  background: #0277bd;
+}
+
+.deleteButton {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.deleteButton:hover {
+  background: #b71c1c;
+}
